@@ -1,9 +1,11 @@
 import getElement from './getElement.js';
+import { hideLoading } from './toggleLoading.js';
 
 const displayDrinks = ({drinks}) => {
     const section = getElement('.section-center')
     const title = getElement('.title')
     if(!drinks) {
+        hideLoading()
         title.textContent = 'sorry, no drinks matched your search'
         section.innerHTML = null
         return
@@ -19,7 +21,7 @@ const displayDrinks = ({drinks}) => {
         </a>
         `
     }).join('')
-    // hide loading
+    hideLoading()
     title.textContent = ''
     section.innerHTML = newDrinks
     return section
