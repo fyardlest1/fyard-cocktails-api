@@ -1,4 +1,3 @@
-import displayDrink from './src/displaySingleDrink';
 import fetchDrinks from './src/fetchDrinks.js';
 import displayDrink from './src/displaySingleDrink.js'
 
@@ -13,4 +12,4 @@ const presentDrink = async () => {
     }
 }
 
-window.addEventListener('DOMCntentLoaded', presentDrink)
+window.addEventListener('DOMContentLoaded', presentDrink)
